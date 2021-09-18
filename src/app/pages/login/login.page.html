@@ -1,0 +1,39 @@
+
+<ion-content>
+
+  <div class="ion-padding-vertical">
+
+    <ion-card class="ion-text-center ion-padding-vertical">
+
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h1>Bienvenido</h1>
+        </ion-label>
+      </ion-card-title>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.nombreUsuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Password</ion-label>
+
+          <ion-input type="password" [(ngModel)]="usuario.password"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item>
+              <ion-label>Recuerdame</ion-label>
+              <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            </ion-item>
+
+            <ion-button id="login" shape="block"(click)="ingresar()">Ingresar</ion-button>
+            <ion-button id="recovery" shape="block"  fill="outline"  >Recuperar Contraseña</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+  
+</ion-content>
