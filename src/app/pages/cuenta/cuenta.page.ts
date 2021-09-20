@@ -14,25 +14,30 @@ import { Persona } from '../../model/Persona';
 export class CuentaPage implements OnInit {
 
   public usuario: Usuario;
+
+  public nivelesEducacionales: NivelEducacional[] = [
+    {id: 1, nombre: 'Básica Incompleta'},
+    {id: 2, nombre: 'Básica Completa'},
+    {id: 3, nombre: 'Media Incompleta'},
+    {id: 4, nombre: 'Media Completa'},
+    {id: 5, nombre: 'Superior Incompleta'},
+    {id: 6, nombre: 'Superior Completa'}
+  ];
+
+  public persona: Persona = new Persona();
   
   constructor(
     private activeroute: ActivatedRoute
   , private router: Router
   , private alertController: AlertController) {
 
-  // Se llama a la ruta activa y se obtienen sus parámetros mediante una subscripcion
-  this.activeroute.queryParams.subscribe(params => {       // Utilizamos expresión lambda
-    if (this.router.getCurrentNavigation().extras.state) { // Validar que tenga datos extras
+  this.activeroute.queryParams.subscribe(params => {       
+    if (this.router.getCurrentNavigation().extras.state) { 
 
-      // Si tiene datos extra, se rescatan y se asignan a una propiedad
       this.usuario = this.router.getCurrentNavigation().extras.state.usuario;
 
     } else {
-      /*
-        Si no vienen datos extra desde la página anterior, quiere decir que el usuario
-        intentó entrar directamente a la página home sin pasar por el login,
-        de modo que el sistema debe enviarlo al login para que inicie sesión.
-      */
+
       this.router.navigate(['/cuenta']);
     }
 });
@@ -40,5 +45,44 @@ export class CuentaPage implements OnInit {
 
   ngOnInit() {
   }
+
+  public limpiarFormulario(): void {
+
+    for (const [key, value] of Object.entries(this.persona)) {
+
+        Object.defineProperty(this.persona, key, {value: ''});
+      }
+    }
+  
+    public mostrarDatosPersona(): void {
+  
+      if (this.persona.nombre.trim() === '' && this.persona.apellido === '') {
+        this.presentAlert('Datos personales', 'Para mostrar los datos de la persona, '
+          + 'al menos debe tener un valor para el nombre o el apellido.');
+        return;
+      }
+  
+      const mensaje =
+          '<br>Usuario: ' + this.usuario.nombreUsuario
+        + '<br>Nombre: ' + this.persona.nombre
+        + '<br>Apellido: ' + this.persona.apellido
+        + '<br>Educación: ' + this.persona.nivelEducacional.id + ' - '
+        + this.nivelesEducacionales.find(
+            n => n.id === this.persona.nivelEducacional.id).nombre
+        + '<br>Nacimiento: ' + this.persona.fecNacimiento;
+  
+      this.presentAlert('Datos personales', mensaje);
+    }
+  
+    public async presentAlert(titulo: string, mensaje: string) {
+      const alert = await this.alertController.create({
+        header: titulo,
+        message: mensaje,
+        buttons: ['OK']
+      });
+  
+      await alert.present();
+    }
+  
 
 }

@@ -10,6 +10,8 @@ import { Usuario } from 'src/app/model/Usuario';
   styleUrls: ['./recovery-password.page.scss'],
 })
 export class RecoveryPasswordPage implements OnInit {
+  
+  public usuario: Usuario;
 
   constructor(private router: Router) { }
 

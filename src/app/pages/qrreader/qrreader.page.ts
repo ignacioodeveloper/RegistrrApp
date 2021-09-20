@@ -1,5 +1,6 @@
 
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastController, LoadingController, Platform } from '@ionic/angular';
 import jsQR from 'jsqr';
  
@@ -23,6 +24,7 @@ export class QrreaderPage {
   loading: HTMLIonLoadingElement = null;
  
   constructor(
+    private router: Router,
     private toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
     private plt: Platform
@@ -33,6 +35,11 @@ export class QrreaderPage {
       console.log('I am a an iOS PWA!');
       // E.g. hide the scan functionality!
     }
+  }
+
+  public volver(): void {
+    this.router.navigate(['/cuenta']);
+
   }
  
   ngAfterViewInit() {
