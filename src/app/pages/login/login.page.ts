@@ -25,6 +25,11 @@ export class LoginPage implements OnInit {
     // this.ingresar();
   }
 
+  public ingresarRecovery(): void {
+    this.router.navigate(['/recovery-password']);
+  }
+
+
   public ingresar(): void {
 
     if(!this.validarNombreUsuario(this.usuario)) {

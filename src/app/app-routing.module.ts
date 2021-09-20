@@ -32,7 +32,15 @@ const routes: Routes = [
   {
     path: 'qrreader',
     loadChildren: () => import('./pages/qrreader/qrreader.module').then( m => m.QrreaderPageModule)
+  },  {
+    path: 'recovery-password',
+    loadChildren: () => import('./pages/recovery-password/recovery-password.module').then( m => m.RecoveryPasswordPageModule)
   },
+  {
+    path: 'mensaje-enviado',
+    loadChildren: () => import('./pages/mensaje-enviado/mensaje-enviado.module').then( m => m.MensajeEnviadoPageModule)
+  },
+
 ];
 
 @NgModule({
