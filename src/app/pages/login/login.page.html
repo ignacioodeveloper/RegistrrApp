@@ -26,8 +26,7 @@
               <ion-label>Recuerdame</ion-label>
               <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
             </ion-item>
-
-            <ion-button id="login" shape="block" (click)="ingresar()">Ingresar</ion-button>
+            <app-button-comp buttonName="Ingresar" (click)="ingresar()"></app-button-comp>
             <ion-button id="recovery" shape="block"  fill="outline" (click)="ingresarRecovery()" >Recuperar Contraseña</ion-button>
           </ion-col>
         </ion-row>
