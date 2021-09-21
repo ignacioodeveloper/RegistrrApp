@@ -8,6 +8,7 @@ import { AyudaPageRoutingModule } from './ayuda-routing.module';
 
 import { AyudaPage } from './ayuda.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     AyudaPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    MatIconModule
   ],
   declarations: [AyudaPage]
 })

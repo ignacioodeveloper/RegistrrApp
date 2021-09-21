@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { BottomNavBarComponent } from './bottom-nav-bar/bottom-nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -51,11 +52,13 @@ const routes: Routes = [
     RouterModule,
     CommonModule,
     IonicModule,
+    MatIconModule
   ],
   exports: 
   [
     HeaderComponent,
-    BottomNavBarComponent
+    BottomNavBarComponent,
+    MatIconModule
   ]
 
 })

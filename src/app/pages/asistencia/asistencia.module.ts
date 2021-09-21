@@ -8,6 +8,7 @@ import { AsistenciaPageRoutingModule } from './asistencia-routing.module';
 
 import { AsistenciaPage } from './asistencia.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     AsistenciaPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    MatIconModule
   ],
   declarations: [AsistenciaPage]
 })
