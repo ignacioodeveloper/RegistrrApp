@@ -1,7 +1,12 @@
-ion-list-header {
+ion-title {
     font-family: 'Inter-SemiBold';
-    font-size: 40px;
+    font-size: 50px;
     text-transform: capitalize;
-    padding-top: 80px;
+    padding-left: 10px;
+}
+
+ion-header {
+    padding-top: 20%;
+    
 }
 
