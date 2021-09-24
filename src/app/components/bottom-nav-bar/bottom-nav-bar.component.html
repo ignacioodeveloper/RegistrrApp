@@ -1,37 +1,26 @@
-
-
 <ion-tabs>
-  
+
+
+
+
   <ion-tab-bar slot="bottom" color="primary">
-
     <ion-tab-button tab="cuenta" routerLink="/cuenta">
-      <ion-icon name="person-circle-outline"></ion-icon>
       <ion-label>Cuenta</ion-label>
-      </ion-tab-button>
-
+      <ion-icon name="person-circle"></ion-icon>
+    </ion-tab-button>
     <ion-tab-button tab="horario" routerLink="/horario">
-      <ion-icon name="calendar-outline"></ion-icon>
       <ion-label>Horario</ion-label>
+      <ion-icon name="calendar"></ion-icon>
     </ion-tab-button>
-
-
-    <ion-tab-button routerLink="/qrreader">
-      <ion-fab>
-        <ion-fab-button color='dark'>
-          <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-    </ion-tab-button>
-
-
-    <ion-tab-button tab="calendar" routerLink="/asistencia">
-      <ion-icon name="podium-outline"></ion-icon>
+    <ion-tab-button tab="asistencia" routerLink="/asistencia">
       <ion-label>Asistencia</ion-label>
+      <ion-icon name="podium"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="help" routerLink="/ayuda">
-      <ion-icon name="help"></ion-icon>
+    <ion-tab-button tab="ayuda" routerLink="/ayuda">
       <ion-label>Ayuda</ion-label>
+      <ion-icon name="help"></ion-icon>
     </ion-tab-button>
+
   </ion-tab-bar>
 </ion-tabs>
