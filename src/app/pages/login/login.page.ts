@@ -35,6 +35,9 @@ export class LoginPage implements OnInit {
     if(!this.validarNombreUsuario(this.usuario)) {
       return;
     }
+    if(!this.validarPassword(this.usuario)){
+      return;
+    }
 
     this.mostrarMensaje('Bienvenido');
 
@@ -58,6 +61,18 @@ export class LoginPage implements OnInit {
     return true;
   }
 
+  public validarPassword(usuario: Usuario): boolean {
+    const mensajeError = usuario.validarPassword();
+
+    if(mensajeError){
+      this.mostrarMensaje(mensajeError);
+      return false;
+    }
+
+    return true;
+
+  }
+  
 
   async mostrarMensaje(mensaje: string, duracion?: number) {
     const toast = await this.toastController.create({
