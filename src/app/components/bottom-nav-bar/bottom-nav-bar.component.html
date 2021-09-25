@@ -1,32 +1,28 @@
-<ion-tabs>
+<!-- <ion-item class="col-12" slot="bottom">
+  <ion-tabs>
 
-  <ion-tab-bar 
-    slot="bottom" 
-    color="primary">
+
+
+  
+  
+  
+
+
+</ion-item> -->
+
+<ion-row class="top-20" slot="bottom">
+  <ion-col >
+    <ion-tab-bar color="primary">
     <ion-tab-button
-      *ngFor="let c of componentes"
-      [routerLink]="c.redirectTo" >
-      <ion-label>{{ c.name }}</ion-label>
-      <ion-icon [icon]="c.icon"></ion-icon>
+    *ngFor="let c of componentes"
+    [routerLink]="c.redirectTo" >
+    <ion-label>{{ c.name }}</ion-label>
+    <ion-icon [icon]="c.icon"></ion-icon>
     </ion-tab-button>
-
-
-
-
   </ion-tab-bar>
-</ion-tabs>
+  
 
-<!-- 
-  <ion-tab-button tab="horario" routerLink="/horario">
-    <ion-label>Horario</ion-label>
-    <ion-icon name="calendar"></ion-icon>
-  </ion-tab-button>
-  <ion-tab-button tab="asistencia" routerLink="/asistencia">
-    <ion-label>Asistencia</ion-label>
-    <ion-icon name="podium"></ion-icon>
-  </ion-tab-button>
 
-  <ion-tab-button tab="ayuda" routerLink="/ayuda">
-    <ion-label>Ayuda</ion-label>
-    <ion-icon name="help"></ion-icon>
-  </ion-tab-button> -->
+  </ion-col>
+
+</ion-row>
