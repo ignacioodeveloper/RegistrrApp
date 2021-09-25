@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { BottomNavBarComponent } from './bottom-nav-bar/bottom-nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { LoginHeaderComponent } from './login-header/login-header.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HeaderComponent,
-    BottomNavBarComponent
+    BottomNavBarComponent,
+    LoginHeaderComponent
   ],
   imports: [
     FormsModule,
@@ -55,7 +57,8 @@ const routes: Routes = [
   exports: 
   [
     HeaderComponent,
-    BottomNavBarComponent
+    BottomNavBarComponent,
+    LoginHeaderComponent
   ]
 
 })
