@@ -45,7 +45,6 @@ export class BottomNavBarComponent implements OnInit {
   ngOnInit() {}
 
 }
-
 interface Componente {
   icon: string,
   name: string,
