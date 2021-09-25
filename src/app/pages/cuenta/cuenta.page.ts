@@ -29,7 +29,9 @@ export class CuentaPage implements OnInit {
   constructor(
     private activeroute: ActivatedRoute
   , private router: Router
-  , private alertController: AlertController) {
+  , private alertController: AlertController
+  , public alertCtrl: AlertController
+  ) {
 
   this.activeroute.queryParams.subscribe(params => {       
     if (this.router.getCurrentNavigation().extras.state) { 
@@ -54,6 +56,7 @@ export class CuentaPage implements OnInit {
       }
     }
   
+
     public mostrarDatosPersona(): void {
   
       if (this.persona.nombre.trim() === '' && this.persona.apellido === '') {
@@ -72,7 +75,7 @@ export class CuentaPage implements OnInit {
         + '<br>Nacimiento: ' + this.persona.fecNacimiento;
   
       this.presentAlert('Datos personales', mensaje);
-    }
+    }    
   
     public async presentAlert(titulo: string, mensaje: string) {
       const alert = await this.alertController.create({
@@ -83,6 +86,15 @@ export class CuentaPage implements OnInit {
   
       await alert.present();
     }
+
+  // input alert cuenta page
+  async presentInput() {
+    const input = await this.alertController.create({
+      header: 'CONFIGURAR USUARIO',
+
+    })
+  }
+  
   
 
 }
