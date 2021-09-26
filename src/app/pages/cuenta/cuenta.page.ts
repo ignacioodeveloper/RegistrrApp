@@ -1,6 +1,6 @@
 import { getAttrsForDirectiveMatching } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { Usuario } from 'src/app/model/Usuario';
 import { NivelEducacional } from '../../model/NivelEducacional';
@@ -95,6 +95,17 @@ export class CuentaPage implements OnInit {
     })
   }
   
+  public pasarDatos(): void {
+  
+
+    const navigationExtras: NavigationExtras = {
+      state: {
+        persona: this.persona
+      }
+    }
+    this.router.navigate(['/user-setting'], navigationExtras);
+  
+  }
   
 
 }

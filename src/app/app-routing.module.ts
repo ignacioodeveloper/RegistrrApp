@@ -45,6 +45,10 @@ const routes: Routes = [
     path: 'welcome-page',
     loadChildren: () => import('./pages/welcome-page/welcome-page.module').then( m => m.WelcomePagePageModule)
   },
+  {
+    path: 'user-setting',
+    loadChildren: () => import('./pages/user-setting/user-setting.module').then( m => m.UserSettingPageModule)
+  },
 
 ];
 

@@ -4,6 +4,8 @@ import { NivelEducacional } from './NivelEducacional';
 export class Persona {
     public nombre = '';
     public apellido = '';
+    public sede = '';
+    public carrera = '';
     public nivelEducacional: NivelEducacional = new NivelEducacional(0, '');
     public fecNacimiento = '';
 }

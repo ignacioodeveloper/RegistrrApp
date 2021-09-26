@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/model/Persona';
 import { NivelEducacional } from 'src/app/model/NivelEducacional';
 import { ActivatedRoute, Router, NavigationExtras} from '@angular/router';
+import { Usuario } from 'src/app/model/Usuario';
 
 @Component({
   selector: 'app-user-setting',
@@ -39,6 +40,14 @@ export class UserSettingPage implements OnInit {
 
   ngOnInit() {
   }
+  public noPasarDatos(): void {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        
+      }
+    }
+    this.router.navigate(['/cuenta', navigationExtras])
+  }
 
   public pasarDatos(): void {
   
@@ -48,7 +57,7 @@ export class UserSettingPage implements OnInit {
         persona: this.persona
       }
     }
-    this.router.navigate(['/home'], navigationExtras);
+    this.router.navigate(['/cuenta'], navigationExtras);
   
   }
   
