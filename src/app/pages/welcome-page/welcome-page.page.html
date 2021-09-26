@@ -1,15 +1,28 @@
 
-<ion-content>
+<ion-content class="ion-no-padding">
 
-  <ion-list class="ion-center">
+  <ion-list>
     <ion-img src="/assets/icon/logo-registrrapp.svg"></ion-img>
   </ion-list>
   <ion-title>
     <h1>RegistrrApp</h1>
 
+    <div>
+
+  
+      <ion-button shape="block" routerLink="/login">
+        <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>  
+        Ingresar
+      </ion-button>
+      <ion-button shape="block"  fill="outline" routerLink="/recovery-password">Recuperar Contraseña</ion-button>
+    
+  
+    </div>
+
+
   </ion-title>
 
-  <!-- <app-login-header tituloLogin="RegistrrApp"></app-login-header> -->
+
 
   <ion-footer>
     <img src="/assets/icon/logo-duoc.svg">

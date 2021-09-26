@@ -30,17 +30,14 @@ ion-list {
     position: absolute;
     width: 250px;
     height: 250px;
-    left: 62px;
+    left: 40px;
     top: 84px;
 
 }
 
 ion-img {
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+
 }
 
 
@@ -50,4 +47,10 @@ img {
     height: 27px;
     left: 129px;
     top: 754px;
+}
+
+
+div {
+    position: absolute;
+    top: 150px;
 }
