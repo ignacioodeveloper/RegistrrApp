@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     // default route
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'welcome-page',
     pathMatch: 'full'
   },
   {
@@ -32,13 +32,18 @@ const routes: Routes = [
   {
     path: 'qrreader',
     loadChildren: () => import('./pages/qrreader/qrreader.module').then( m => m.QrreaderPageModule)
-  },  {
+  },
+  {
     path: 'recovery-password',
     loadChildren: () => import('./pages/recovery-password/recovery-password.module').then( m => m.RecoveryPasswordPageModule)
   },
   {
     path: 'mensaje-enviado',
     loadChildren: () => import('./pages/mensaje-enviado/mensaje-enviado.module').then( m => m.MensajeEnviadoPageModule)
+  },
+  {
+    path: 'welcome-page',
+    loadChildren: () => import('./pages/welcome-page/welcome-page.module').then( m => m.WelcomePagePageModule)
   },
 
 ];
