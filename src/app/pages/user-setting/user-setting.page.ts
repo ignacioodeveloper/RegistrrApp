@@ -30,20 +30,5 @@ export class UserSettingPage implements OnInit {
   ngOnInit() {
   }
 
-  public pasarDatos(): void {
-    const navigationExtras: NavigationExtras = {
-      state: {
-        persona: this.persona
-      }
-    }
-    this.router.navigate(['/cuenta'], navigationExtras);
-  }
-
-  public noPasarDatos(): void {
-    const navigationExtras: NavigationExtras = {
-      state: {}
-    }
-    this.router.navigate(['/cuenta', navigationExtras])
-  }
 
 }
