@@ -8,4 +8,5 @@ export class Persona {
     public carrera = '';
     public nivelEducacional: NivelEducacional = new NivelEducacional(0, '');
     public fecNacimiento = '';
+    public email: '';
 }

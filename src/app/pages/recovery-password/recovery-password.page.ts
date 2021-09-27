@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Persona } from 'src/app/model/Persona';
 import { Usuario } from 'src/app/model/Usuario';
 
 
@@ -11,9 +12,12 @@ import { Usuario } from 'src/app/model/Usuario';
 })
 export class RecoveryPasswordPage implements OnInit {
   
-  public usuario: Usuario;
+  public persona: Persona;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private toastController: ToastController) {
+    this.persona = new Persona();
+    this.persona.email = '';
+   }
 
   ngOnInit() {
   }
