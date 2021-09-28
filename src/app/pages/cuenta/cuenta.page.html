@@ -4,36 +4,50 @@
 
 <ion-content>
 
-    <ion-item>
-      <ion-card>
-        <ion-item color="primary">
-          <ion-icon color="light" slot="start" name="person-circle"></ion-icon>
-          <ion-label>{{ persona.nombre || 'Ingrese un Nombre' }} {{ persona.apellido || 'y Apellido'}}</ion-label>
-        </ion-item>
+    
+    <section class="ion-text-center">
+      <ion-icon id="user-icon" color="primary" name="person-circle-outline"></ion-icon>
+    </section>
 
+    <ion-card class="ion-text-center" color="primary">
+      <ion-card-header >
+        <ion-title text-capitalize class="ion-padding">{{ persona.nombre || 'Ingrese un Nombre' }} {{ persona.apellido || 'y Apellido'}}</ion-title>
+      </ion-card-header>
     </ion-card>
-    </ion-item>
 
-    <ion-item>
-      <ion-card>
-        <ion-card-title>{{ persona.carrera || 'Ingrese una Carrera' }}</ion-card-title>
-      </ion-card>
-    </ion-item>
-
-    <ion-item>
-      <ion-card>
+    <ion-card class="ion-text-center">
+      <ion-item color="primary">
+        <ion-label class="ion-text-center">Sede</ion-label>
+      </ion-item>
+  
+      <ion-card-content>
         <ion-card-title>{{ persona.sede || 'Ingrese una Sede' }}</ion-card-title>
-      </ion-card>
-    </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="ion-text-center">
+      <ion-item color="primary" >
+        <ion-label class="ion-text-center">Carrera</ion-label>
+      </ion-item>
+  
+      <ion-card-content>
+        <ion-card-title>{{ persona.carrera || 'Ingrese una Carrera' }}</ion-card-title>
+      </ion-card-content>
+    </ion-card>
+  
+    <section class="ion-text-center">
+      <ion-button size="large" (click)="pasarDatos()">
+        <ion-icon slot="start" name="settings-outline"></ion-icon>
+        Configurar
+      </ion-button>
+    </section>
 
-    <ion-row>
-      <ion-col size="12">
-
-        <ion-button id="login" shape="block" (click)="pasarDatos()">
-          Configurar Cuenta
-        </ion-button>
-      </ion-col>
-    </ion-row>
+    <section class="ion-text-center">
+      <ion-button size="large" routerLink="/login" color="danger">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        Cerrar Sesion
+      </ion-button>
+    </section>
 
 
 </ion-content>

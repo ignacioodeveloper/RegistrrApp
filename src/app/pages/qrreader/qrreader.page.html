@@ -12,21 +12,27 @@
         <!-- <input #fileinput type="file" accept="image/*;capture=camera" hidden (change)="handleFile($event.target.files)"> -->
        
         <!-- Trigger the file input -->
-        <ion-button expand="full" (click)="captureImage()">
-          <ion-icon slot="start" name="camera"></ion-icon>
-          Capture Image
-        </ion-button>
+        <section class="ion-text-center">
+          <!-- <header>Large Size</header> -->
+          <ion-button size="large" (click)="stopScan()" color="danger" *ngIf="scanActive">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+
+
+          <ion-button size="large" color="medium" (click)="captureImage()">
+            <ion-icon slot="start" name="camera"></ion-icon>
+
+            Cargar Imagen</ion-button>
+
+
+          <ion-button size="large" color="primary" (click)="startScan()">
+            Entrar</ion-button>
+        </section>
+
+      
        
-        <ion-button expand="full" (click)="startScan()">
-          <ion-icon slot="start" name="qr-scanner"></ion-icon>
-          Start scan
-        </ion-button>
-       
-        <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
-          <ion-icon slot="start" name="refresh"></ion-icon>
-          Reset
-        </ion-button>
-       
+
+
         <!-- Shows our camera stream -->
         <video #video [hidden]="!scanActive" width="100%"></video>
        
@@ -34,10 +40,13 @@
         <canvas #canvas hidden></canvas>
        
         <!-- Stop our scanner preview if active -->
-        <ion-button expand="full" (click)="stopScan()" color="danger" *ngIf="scanActive">
-          <ion-icon slot="start" name="close"></ion-icon>
-          Stop scan
-        </ion-button>
+        <section  class="ion-text-center" >
+          <ion-button size="large" (click)="reset()" color="warning" *ngIf="scanResult">
+            <ion-icon slot="start" name="refresh"></ion-icon>
+            Volver a Intentar
+          </ion-button>
+        </section>
+       
       
       
        
