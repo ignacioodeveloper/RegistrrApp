@@ -5,10 +5,9 @@
         <h1>Unirse a la <br>Sala del Curso</h1>
     </ion-label>
 </ion-card-title>
-
 <ion-content>
+    
 
-    <ion-content>
         <!-- Fallback for iOS PWA -->
         <!-- <input #fileinput type="file" accept="image/*;capture=camera" hidden (change)="handleFile($event.target.files)"> -->
        
@@ -44,7 +43,7 @@
        
         <ion-card *ngIf="scanResult">
           <ion-card-header>
-            <ion-card-title>QR Code</ion-card-title>
+            <ion-card-title>Detalle Sala:</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             {{ scanResult }}
@@ -52,8 +51,6 @@
         </ion-card>
 
 
-      
-      </ion-content>
       
 
 </ion-content>
