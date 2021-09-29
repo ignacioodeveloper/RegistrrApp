@@ -4,18 +4,57 @@
 
 <ion-content>
 
-    
-    <section class="ion-text-center">
-      <ion-icon id="user-icon" color="primary" name="person-circle-outline"></ion-icon>
-    </section>
 
-    <ion-card class="ion-text-center" color="primary">
-      <ion-card-header >
-        <ion-title text-capitalize class="ion-padding">{{ persona.nombre || 'Ingrese un Nombre' }} {{ persona.apellido || 'y Apellido'}}</ion-title>
-      </ion-card-header>
+
+    <ion-card class="ion-text-center">
+
+        <div id="card1" >
+          <ion-icon id="user-icon" color="light" name="person-circle-outline"></ion-icon>
+        </div>
+
+      <ion-card-content>
+        
+        <h1>{{ persona.nombre || 'Ingrese un ' }}</h1>
+        <h1 class="nombre2">{{ persona.apellido || 'nombre y apellido' }}</h1>
+      </ion-card-content>
     </ion-card>
 
     <ion-card class="ion-text-center">
+      <div >
+        <img src="./assets/img/sede_padre_alonso.jpg" alt="">
+        <h1 id="sede" >Sede</h1>
+        
+
+      </div>
+      <ion-card-content>
+        <h1>{{ persona.sede || 'Ingrese una Sede' }}</h1>
+
+      </ion-card-content>
+
+
+
+    </ion-card>
+    
+    <ion-card>
+      <ion-item color="primary" class="ion-text-center">
+        <ion-icon color="light" slot="end" name="school"></ion-icon>
+        <ion-label class="ion-text-center">Carrera</ion-label>
+        
+      </ion-item>
+
+      <ion-card-content class="ion-text-center">
+        
+        <h1>{{ persona.carrera || 'Ingrese una carrera' }}</h1>
+      </ion-card-content>
+    </ion-card>
+
+
+
+    
+
+
+
+    <!-- <ion-card class="ion-text-center">
       <ion-item color="primary">
         <ion-label class="ion-text-center">Sede</ion-label>
       </ion-item>
@@ -23,9 +62,9 @@
       <ion-card-content>
         <ion-card-title>{{ persona.sede || 'Ingrese una Sede' }}</ion-card-title>
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
   
-    <ion-card class="ion-text-center">
+    <!-- <ion-card class="ion-text-center">
       <ion-item color="primary" >
         <ion-label class="ion-text-center">Carrera</ion-label>
       </ion-item>
@@ -33,7 +72,7 @@
       <ion-card-content>
         <ion-card-title>{{ persona.carrera || 'Ingrese una Carrera' }}</ion-card-title>
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
   
     <section class="ion-text-center">
       <ion-button size="large" (click)="pasarDatos()">

@@ -1,3 +1,37 @@
 #user-icon {
+    margin-top: 10px;
+
+}
+.nombre2 {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+img {
+    opacity: 0.7;
+    
+}
+
+#sede {
+    color: #ffff;
+    position: absolute;
+
+    top: 25%;
+    left: 20%;
+    font-size: 80px;
+    text-align: center  ;
+}
+h1 {
+    font-family: 'Inter-SemiBold';
+}
+
+#card1 {
     font-size: 100px;
+    
+    background: linear-gradient(135deg, #E25822 0%, #7480FF 100%);
+    width: 344px;
+    height: 120px;
+    border-radius: 3px;
+    
+    padding: 0;
+
 }
