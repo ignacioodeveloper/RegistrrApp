@@ -45,7 +45,11 @@ export class CuentaPage implements OnInit {
 });
 }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.persona.nombre = 'Javier Ignacio'
+    this.persona.apellido = 'Contreras Jimenez'
+    this.persona.sede = 'Padre Alonso Ovalle'
+    this.persona.carrera = 'Analista'
   }
 
   public limpiarFormulario(): void {

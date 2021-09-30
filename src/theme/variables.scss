@@ -7,15 +7,18 @@
   // 264653 color dark blue | 2083F8 light blue
 
   // dark blue duoc #012C56
+  // dark blue duoc 2 #002E52
 
   // DUOC COLORS : 
-  // paleta primaria: negro #1A1A1A | blanco #ffffff | amarillo #ffb800
+  // paleta primaria: negro #1A1A1A | blanco #ffffff | amarillo #ffb800 | #FCBD1B
 
-  --ion-color-primary: #012C56;
+  --ion-color-primary: #002E52  ;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
+
+  // color de la transicion del button
+  --ion-color-primary-shade: #012C56;
   --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/

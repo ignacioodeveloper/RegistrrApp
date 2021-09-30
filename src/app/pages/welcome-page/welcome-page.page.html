@@ -1,33 +1,36 @@
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding ion-text-center">
+  <div>
+    <h1>Sistema de Asistencia <br>
+        Online <span style="color: #fcbd1b">Duoc</span> UC
+    </h1>
+  </div>
 
+  <div>
+    <img id="img-welcome" src="./assets/img/welcome-page-img.svg" alt="">
 
-  <ion-item class="ion-text-center">
-    <img height="300px" width="100%"  src="/assets/icon/logo-registrrapp.svg">
+  </div>
 
-  </ion-item>
-
-  <ion-toolbar>
-    <ion-title id="titulo" class="ion-text-center">
-      RegistrrApp
-    </ion-title>
-  </ion-toolbar>
-
-  <ion-button mode="ios" id="ingresar-button" shape="block" routerLink="/login">
-    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>  
-    Ingresar
-  </ion-button>
-
-  <ion-button mode="ios" shape="block"  fill="outline" routerLink="/recovery-password">Recuperar</ion-button>
+  <div>
+    <section>
+      <ion-button mode="ios" size="large" id="ingresar-button" shape="round" routerLink="/login">
+        <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>  
+        Ingresar
+      </ion-button>
+    </section>
   
+    <section>
+      <ion-button mode="ios" shape="round" size="large" fill="outline" routerLink="/recovery-password">
+        Recuperar
+      </ion-button>
+    </section>
+  
+    <section>
+      <p>Olvidaste tu Contraseña?</p>
+    </section>
+  </div>
 
-  <ion-toolbar>
-    <ion-title class="ion-text-center">
-      Olvidaste tu Contraseña?
-    </ion-title>  
-  </ion-toolbar>
 </ion-content>
-
 
 <ion-footer class="ion-text-center">
   <img height="100px" width="100px" src="/assets/icon/logo-duoc.svg">

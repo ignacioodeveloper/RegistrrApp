@@ -10,7 +10,7 @@ export class BottomNavBarComponent implements OnInit {
   componentes: Componente[] = [
     
     {
-      icon: 'person-circle',
+      icon: 'home',
       name: 'Cuenta',
       redirectTo: '/cuenta'
     },
