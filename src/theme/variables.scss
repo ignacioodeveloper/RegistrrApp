@@ -4,7 +4,14 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #2083F8;
+  // 264653 color dark blue | 2083F8 light blue
+
+  // dark blue duoc #012C56
+
+  // DUOC COLORS : 
+  // paleta primaria: negro #1A1A1A | blanco #ffffff | amarillo #ffb800
+
+  --ion-color-primary: #012C56;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
