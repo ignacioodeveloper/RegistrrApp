@@ -1,12 +1,14 @@
 <ion-footer class="top-20" slot="bottom">
 
-    <ion-tab-bar color="primary">
-      <ion-tab-button
-          *ngFor="let c of componentes"
-          [routerLink]="c.redirectTo" >
-        <ion-label>{{ c.name }}</ion-label>
-        <ion-icon [icon]="c.icon"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
+    <ion-tabs>
+      <ion-tab-bar class="nav-bar">
+        <ion-tab-button
+        *ngFor="let c of componentes"
+        [routerLink]="c.redirectTo" >
+      <ion-label>{{ c.name }}</ion-label>
+      <ion-icon [icon]="c.icon"></ion-icon>
+    </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
 
 </ion-footer>
